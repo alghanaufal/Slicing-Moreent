@@ -9,7 +9,7 @@ import {
 import { styled, alpha } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import TuneIcon from "@mui/icons-material/Tune";
@@ -54,7 +54,11 @@ export default function Navbar() {
   return (
     <AppBar sx={{ height: 124, backgroundColor: "white" }}>
       <Toolbar sx={{ height: "100%" }}>
-        <img src={Logo} alt="Logo" style={{ width: "148px", height: "44px", margin:"0 60px" }} />
+        <img
+          src={Logo}
+          alt="Logo"
+          style={{ width: "148px", height: "44px", margin: "0 60px" }}
+        />
         <Search>
           <SearchIconWrapper>
             <SearchIcon />
@@ -76,7 +80,7 @@ export default function Navbar() {
             sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}
           >
             <IconButton size="large" aria-label="show 4 new mails">
-                <FavoriteIcon />
+              <FavoriteIcon />
             </IconButton>
             <IconButton size="large" aria-label="show 17 new notifications">
               <Badge color="secondary" variant="dot">
