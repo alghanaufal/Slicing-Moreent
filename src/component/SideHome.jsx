@@ -2,15 +2,10 @@ import { Box, FormControlLabel, Checkbox, FormControl, FormGroup, Slider, Typogr
 import { useState } from 'react'
 
 export default function SideHome () {
-  const [acceptTnC, setAcceptTnC] = useState(false)
   const [skills, setSkills] = useState([])
   const [capacity, setCapacity] = useState([])
-  // console.log({acceptTnC}) 
-  // console.log({skills})
-  console.log({capacity})
-  const handleChange = (event) => {
-    setAcceptTnC(event.target.checked)
-  }
+  // console.log({capacity})
+
   const handleSkillChange = (event) => {
     const index = skills.indexOf(event.target.value)
     if (index === -1) { //kalau belum ada pada array, maka salin sebelumnya dan tambahkan ke event.target.value

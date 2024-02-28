@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Grid, Card, CardContent, Typography } from "@mui/material";
+import SideHome from "../component/SideHome";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           </Card>
         </Grid>
       </Grid>
+      <SideHome />
     </Container>
   );
 }
