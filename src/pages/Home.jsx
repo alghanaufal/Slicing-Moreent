@@ -1,5 +1,12 @@
 import React from "react";
-import { Stack, Grid, Card, CardContent, Typography, Button } from "@mui/material";
+import {
+  Stack,
+  Grid,
+  Card,
+  CardContent,
+  Typography,
+  Button,
+} from "@mui/material";
 import CardList from "../component/CardList";
 import Cars from "../data.json";
 
@@ -10,10 +17,22 @@ export default function Home() {
   return (
     <Stack sx={{ marginTop: "144px" }}>
       <Grid container spacing={4} sx={{ padding: "36px" }}>
-        {renderCard(Car1, "#54A6FF", "The Best Platform for Car Rental", "Ease of doing a car rental safely and reliably. Of course at a low price.", "#3563E9")}
-        {renderCard(Car2, "#3563E9", "Easy way to rent a car at a low price", "Providing cheap car rental services and safe and comfortable facilities.", "#54A6FF")}
+        {renderCard(
+          Car1,
+          "#54A6FF",
+          "The Best Platform for Car Rental",
+          "Ease of doing a car rental safely and reliably. Of course at a low price.",
+          "#3563E9"
+        )}
+        {renderCard(
+          Car2,
+          "#3563E9",
+          "Easy way to rent a car at a low price",
+          "Providing cheap car rental services and safe and comfortable facilities.",
+          "#54A6FF"
+        )}
       </Grid>
-      <Grid container spacing={2} style={{ padding: "36px" }}>
+      <Grid container spacing={2} sx={{ padding: "36px" }}>
         {Cars.map((car) => (
           <Grid key={car.id} item xs={12} sm={6} md={3}>
             <CardList car={car} />
@@ -24,12 +43,18 @@ export default function Home() {
   );
 }
 
-function renderCard(backgroundImage, backgroundColor, title, description, buttonColor) {
-  const imageHeight = 360
+function renderCard(
+  backgroundImage,
+  backgroundColor,
+  title,
+  description,
+  buttonColor
+) {
+  const imageHeight = 360;
   return (
     <Grid item xs={6}>
       <Card
-        style={{
+        sx={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundColor: backgroundColor,
           backgroundSize: "cover",
@@ -38,10 +63,10 @@ function renderCard(backgroundImage, backgroundColor, title, description, button
           borderRadius: "15px",
         }}
       >
-        <CardContent style={{ width: "384px", margin: "16px" }}>
+        <CardContent sx={{ width: "384px", margin: "16px" }}>
           <Typography
             variant="h4"
-            style={{
+            sx={{
               marginBottom: "8px",
               fontWeight: "semibold",
               color: "#fff",
@@ -51,12 +76,12 @@ function renderCard(backgroundImage, backgroundColor, title, description, button
           </Typography>
           <Typography
             variant="h6"
-            style={{ marginBottom: "8px", color: "#fff" }}
+            sx={{ marginBottom: "8px", color: "#fff" }}
           >
             {description}
           </Typography>
           <Button
-            style={{
+            sx={{
               backgroundColor: buttonColor,
               color: "#fff",
               padding: "8px 16px",

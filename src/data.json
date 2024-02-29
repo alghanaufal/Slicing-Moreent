@@ -3,72 +3,120 @@
     "id": 1,
     "title": "Product 1",
     "description": "Description of Product 1",
-    "image": "/assets/Car1.png"
+    "image": "/assets/Car1.png",
+    "gas": 80,
+    "type": "Manual",
+    "people": 4,
+    "price": 99
   },
   {
     "id": 2,
     "title": "Product 2",
     "description": "Description of Product 2",
-    "image": "/assets/Car2.png"
+    "image": "/assets/Car2.png",
+    "gas": 80,
+    "type": "Manual",
+    "people": 4,
+    "price": 99
   },
   {
     "id": 3,
     "title": "Product 3",
     "description": "Description of Product 3",
-    "image": "/assets/Car3.png"
+    "image": "/assets/Car3.png",
+    "gas": 80,
+    "type": "Manual",
+    "people": 4,
+    "price": 99
   },
   {
     "id": 4,
     "title": "Product 4",
     "description": "Description of Product 4",
-    "image": "/assets/Car4.png"
+    "image": "/assets/Car4.png",
+    "gas": 80,
+    "type": "Manual",
+    "people": 4,
+    "price": 99
   },
   {
     "id": 5,
     "title": "Product 5",
     "description": "Description of Product 5",
-    "image": "/assets/Car5.png"
+    "image": "/assets/Car5.png",
+    "gas": 80,
+    "type": "Manual",
+    "people": 4,
+    "price": 99
   },
   {
     "id": 6,
     "title": "Product 6",
     "description": "Description of Product 6",
-    "image": "/assets/Car6.png"
+    "image": "/assets/Car6.png",
+    "gas": 80,
+    "type": "Manual",
+    "people": 4,
+    "price": 99
   },
   {
     "id": 7,
     "title": "Product 7",
     "description": "Description of Product 7",
-    "image": "/assets/Car7.png"
+    "image": "/assets/Car7.png",
+    "gas": 80,
+    "type": "Manual",
+    "people": 4,
+    "price": 99
   },
   {
     "id": 8,
     "title": "Product 8",
     "description": "Description of Product 8",
-    "image": "/assets/Car8.png"
+    "image": "/assets/Car8.png",
+    "gas": 80,
+    "type": "Manual",
+    "people": 4,
+    "price": 99
   },
   {
     "id": 9,
     "title": "Product 9",
     "description": "Description of Product 9",
-    "image": "/assets/Car9.png"
+    "image": "/assets/Car9.png",
+    "gas": 80,
+    "type": "Manual",
+    "people": 4,
+    "price": 99
   },
   {
     "id": 10,
     "title": "Product 10",
     "description": "Description of Product 10",
-    "image": "/assets/Car10.png"
+    "image": "/assets/Car10.png",
+    "gas": 80,
+    "type": "Manual",
+    "people": 4,
+    "price": 99
   },
   {
     "id": 11,
     "title": "Product 11",
     "description": "Description of Product 11",
-    "image": "/assets/Car11.png"
+    "image": "/assets/Car11.png",
+    "gas": 80,
+    "type": "Manual",
+    "people": 4,
+    "price": 99
   },
   {
     "id": 12,
     "title": "Product 12",
     "description": "Description of Product 12",
-    "image": "/assets/Car12.png"
+    "image": "/assets/Car12.png",
+    "gas": 80,
+    "type": "Manual",
+    "people": 4,
+    "price": 99
   }
 ]
