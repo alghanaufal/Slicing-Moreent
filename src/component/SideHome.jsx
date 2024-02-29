@@ -1,4 +1,4 @@
-import { Box, FormControlLabel, Checkbox, FormControl, FormGroup, Slider, Typography } from '@mui/material'
+import { Box, FormControlLabel, Checkbox, FormControl, FormGroup, Slider, Typography, Drawer } from '@mui/material'
 import { useState } from 'react'
 
 export default function SideHome () {
@@ -24,7 +24,11 @@ export default function SideHome () {
   }
 
   return (
-    <Box>
+    <Drawer
+      anchor="left"
+      variant="permanent"
+    >
+    <Box sx={{marginTop: "134px"}}>
       <Box>
         <FormControl>
           <Typography variant='subtitle2'>TYPE</Typography>
@@ -103,5 +107,6 @@ export default function SideHome () {
         <Typography>Max.$100.00</Typography>
       </Box>
     </Box>
+    </Drawer>
   )
 }
