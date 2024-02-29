@@ -19,6 +19,7 @@ export default function CardList({ car }) {
       sx={{
         height: "388px",
         width: "304px",
+        borderRadius: "15px",
       }}
     >
       <CardContent>

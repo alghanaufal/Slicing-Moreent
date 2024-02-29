@@ -5,8 +5,14 @@ import {
   Card,
   CardContent,
   Typography,
+  InputLabel,
+  FormControl,
+  NativeSelect,
   Button,
 } from "@mui/material";
+import CircleTwoToneIcon from "@mui/icons-material/CircleTwoTone";
+import SwapVertIcon from '@mui/icons-material/SwapVert';
+
 import CardList from "../component/CardList";
 import Cars from "../data.json";
 
@@ -15,7 +21,7 @@ import Car2 from "../assets/BGCard2.png";
 
 export default function Home() {
   return (
-    <Stack sx={{ marginTop: "144px" }}>
+    <Stack sx={{ marginTop: "144px", backgroundColor: "#F6F7F9" }}>
       <Grid container spacing={4} sx={{ padding: "36px" }}>
         {renderCard(
           Car1,
@@ -31,6 +37,140 @@ export default function Home() {
           "Providing cheap car rental services and safe and comfortable facilities.",
           "#54A6FF"
         )}
+      </Grid>
+      <Grid container>
+        <Grid>
+          <Typography>
+            <CircleTwoToneIcon /> Pick-Up
+          </Typography>
+          <Grid container>
+            <Grid>
+              <FormControl fullWidth>
+                <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                  Age
+                </InputLabel>
+                <NativeSelect
+                  defaultValue={30}
+                  inputProps={{
+                    name: "age",
+                    id: "uncontrolled-native",
+                  }}
+                >
+                  <option value={10}>Ten</option>
+                  <option value={20}>Twenty</option>
+                  <option value={30}>Thirty</option>
+                </NativeSelect>
+              </FormControl>
+            </Grid>
+            <Grid>
+              <FormControl fullWidth>
+                <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                  Age
+                </InputLabel>
+                <NativeSelect
+                  defaultValue={30}
+                  inputProps={{
+                    name: "age",
+                    id: "uncontrolled-native",
+                  }}
+                >
+                  <option value={10}>Ten</option>
+                  <option value={20}>Twenty</option>
+                  <option value={30}>Thirty</option>
+                </NativeSelect>
+              </FormControl>
+            </Grid>
+            <Grid>
+              <FormControl fullWidth>
+                <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                  Age
+                </InputLabel>
+                <NativeSelect
+                  defaultValue={30}
+                  inputProps={{
+                    name: "age",
+                    id: "uncontrolled-native",
+                  }}
+                >
+                  <option value={10}>Ten</option>
+                  <option value={20}>Twenty</option>
+                  <option value={30}>Thirty</option>
+                </NativeSelect>
+              </FormControl>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid>
+          <Button sx={{
+              backgroundColor: "#3563E9",
+              color: "#fff",
+              padding: "18px",
+              borderRadius: "10px"
+            }}>
+          <SwapVertIcon/>
+          </Button>
+        </Grid>
+        <Grid>
+          <Typography>
+            <CircleTwoToneIcon /> Drop-Off
+          </Typography>
+          <Grid container>
+            <Grid>
+              <FormControl fullWidth>
+                <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                  Age
+                </InputLabel>
+                <NativeSelect
+                  defaultValue={30}
+                  inputProps={{
+                    name: "age",
+                    id: "uncontrolled-native",
+                  }}
+                >
+                  <option value={10}>Ten</option>
+                  <option value={20}>Twenty</option>
+                  <option value={30}>Thirty</option>
+                </NativeSelect>
+              </FormControl>
+            </Grid>
+            <Grid>
+              <FormControl fullWidth>
+                <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                  Age
+                </InputLabel>
+                <NativeSelect
+                  defaultValue={30}
+                  inputProps={{
+                    name: "age",
+                    id: "uncontrolled-native",
+                  }}
+                >
+                  <option value={10}>Ten</option>
+                  <option value={20}>Twenty</option>
+                  <option value={30}>Thirty</option>
+                </NativeSelect>
+              </FormControl>
+            </Grid>
+            <Grid>
+              <FormControl fullWidth>
+                <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                  Age
+                </InputLabel>
+                <NativeSelect
+                  defaultValue={30}
+                  inputProps={{
+                    name: "age",
+                    id: "uncontrolled-native",
+                  }}
+                >
+                  <option value={10}>Ten</option>
+                  <option value={20}>Twenty</option>
+                  <option value={30}>Thirty</option>
+                </NativeSelect>
+              </FormControl>
+            </Grid>
+          </Grid>
+        </Grid>
       </Grid>
       <Grid container spacing={2} sx={{ padding: "36px" }}>
         {Cars.map((car) => (
@@ -74,10 +214,7 @@ function renderCard(
           >
             {title}
           </Typography>
-          <Typography
-            variant="h6"
-            sx={{ marginBottom: "8px", color: "#fff" }}
-          >
+          <Typography variant="h6" sx={{ marginBottom: "8px", color: "#fff" }}>
             {description}
           </Typography>
           <Button

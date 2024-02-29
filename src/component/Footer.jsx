@@ -1,21 +1,6 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  Grid,
-  IconButton,
-  Link,
-  Typography,
-} from "@mui/material";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-
-const socialMediaLinks = {
-  facebook: "#",
-  twitter: "#",
-  instagram: "#",
-};
+import { Box, Container, Grid, Link, Typography, Divider } from "@mui/material";
+import Logo from "../assets/Logo.png";
 
 export default function Footer() {
   return (
@@ -27,91 +12,146 @@ export default function Footer() {
       }}
     >
       <Container maxWidth={false}>
-        <Grid container spacing={2} justifyContent="space-between">
-          <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="h6" gutterBottom>
-              Brand Name
-            </Typography>
-            {/* Add your logo component or image here */}
+        <Grid container spacing={2} justifyContent="space-between" sx={{marginY: "20px"}}>
+          <Grid item xs={12} sm={6} md={6}>
+            <Box sx={{ width: 300, height: 110, marginLeft: "20px" }}>
+              <img
+                src={Logo}
+                alt="Logo"
+                style={{ width: "80px", height: "24px" }}
+              />
+              <Typography gutterBottom>
+                Our vision is to provide convenience and help increase your
+                sales business.
+              </Typography>
+            </Box>
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
-            <Typography variant="subtitle1" gutterBottom>
-              PRODUCT
-            </Typography>
-            <Link href="#" display="block">
-              Features
-            </Link>
-            <Link href="#" display="block">
-              Integrations
-            </Link>
-            <Link href="#" display="block">
-              Pricing
-            </Link>
-            <Link href="#" display="block">
-              FAQ
-            </Link>
-          </Grid>
-          <Grid item xs={6} sm={3} md={2}>
-            <Typography variant="subtitle1" gutterBottom>
-              COMPANY
-            </Typography>
-            <Link href="#" display="block">
-              About Us
-            </Link>
-            <Link href="#" display="block">
-              Careers
-            </Link>
-            <Link href="#" display="block">
-              Privacy Policy
-            </Link>
-            <Link href="#" display="block">
-              Terms of Service
-            </Link>
-          </Grid>
-          <Grid item xs={6} sm={3} md={2}>
-            <Typography variant="subtitle1" gutterBottom>
-              DEVELOPERS
-            </Typography>
-            <Link href="#" display="block">
-              Public API
-            </Link>
-            <Link href="#" display="block">
-              Documentation
-            </Link>
-            <Link href="#" display="block">
-              Guides
-            </Link>
-          </Grid>
-          <Grid item xs={6} sm={3} md={2}>
-            <Typography variant="subtitle1" gutterBottom>
-              SOCIAL MEDIA
-            </Typography>
-            <IconButton
-              aria-label="Facebook"
-              component="a"
-              href={socialMediaLinks.facebook}
+            <Typography
+              variant="subtitle1"
+              gutterBottom
+              sx={{ fontWeight: "bold" }}
             >
-              <FacebookIcon />
-            </IconButton>
-            <IconButton
-              aria-label="Twitter"
-              component="a"
-              href={socialMediaLinks.twitter}
+              About
+            </Typography>
+            <Link
+              href="#"
+              display="block"
+              sx={{ textDecoration: "none", marginBottom: "18px" }}
             >
-              <TwitterIcon />
-            </IconButton>
-            <IconButton
-              aria-label="Instagram"
-              component="a"
-              href={socialMediaLinks.instagram}
+              How it works
+            </Link>
+            <Link
+              href="#"
+              display="block"
+              sx={{ textDecoration: "none", marginBottom: "18px" }}
             >
-              <InstagramIcon />
-            </IconButton>
+              Featured
+            </Link>
+            <Link
+              href="#"
+              display="block"
+              sx={{ textDecoration: "none", marginBottom: "18px" }}
+            >
+              Partnership
+            </Link>
+            <Link
+              href="#"
+              display="block"
+              sx={{ textDecoration: "none", marginBottom: "18px" }}
+            >
+              Business Relation
+            </Link>
+          </Grid>
+          <Grid item xs={6} sm={3} md={2}>
+            <Typography
+              variant="subtitle1"
+              gutterBottom
+              sx={{ fontWeight: "bold" }}
+            >
+              Community
+            </Typography>
+            <Link
+              href="#"
+              display="block"
+              sx={{ textDecoration: "none", marginBottom: "18px" }}
+            >
+              Events
+            </Link>
+            <Link
+              href="#"
+              display="block"
+              sx={{ textDecoration: "none", marginBottom: "18px" }}
+            >
+              Blog
+            </Link>
+            <Link
+              href="#"
+              display="block"
+              sx={{ textDecoration: "none", marginBottom: "18px" }}
+            >
+              Podcast
+            </Link>
+            <Link
+              href="#"
+              display="block"
+              sx={{ textDecoration: "none", marginBottom: "18px" }}
+            >
+              Invite a friend
+            </Link>
+          </Grid>
+          <Grid item xs={6} sm={3} md={2}>
+            <Typography
+              variant="subtitle1"
+              gutterBottom
+              sx={{ fontWeight: "bold" }}
+            >
+              Socials
+            </Typography>
+            <Link
+              href="#"
+              display="block"
+              sx={{ textDecoration: "none", marginBottom: "18px" }}
+            >
+              Discord
+            </Link>
+            <Link
+              href="#"
+              display="block"
+              sx={{ textDecoration: "none", marginBottom: "18px" }}
+            >
+              Instagram
+            </Link>
+            <Link
+              href="#"
+              display="block"
+              sx={{ textDecoration: "none", marginBottom: "18px" }}
+            >
+              Twitter
+            </Link>
+            <Link
+              href="#"
+              display="block"
+              sx={{ textDecoration: "none", marginBottom: "18px" }}
+            >
+              Facebook
+            </Link>
           </Grid>
         </Grid>
-        <Typography variant="body2" align="center" sx={{ pt: 4 }}>
-          © 2024 Company Co. All rights reserved.
-        </Typography>
+        <Divider />
+        <Grid container alignItems="center" sx={{marginY: "20px"}}>
+          <Grid item xs={6}>
+            <Typography sx={{marginLeft: "20px" , fontWeight: "bold"}}>
+              © 2024 Company Co. All rights reserved.
+            </Typography>
+          </Grid>
+          <Grid item xs={3} >
+            <Typography sx={{fontWeight: "bold"}}>Privacy & Policy</Typography>
+          </Grid>
+          <Grid item xs={3}>
+            <Typography sx={{fontWeight: "bold"}}>Terms & Condition</Typography>
+          </Grid>
+        </Grid>
       </Container>
     </Box>
   );
