@@ -13,7 +13,7 @@ import {
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import SideHome from "../component/SideHome";
 import { useState } from "react";
-import Car from "../assets/View.png";
+import Car from "../assets/BGCard2.png";
 
 export default function Detail() {
   const [value, setValue] = useState(4);
