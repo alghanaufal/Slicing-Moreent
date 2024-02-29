@@ -2,175 +2,125 @@ import React from "react";
 import {
   Stack,
   Grid,
-  Card,
-  CardContent,
-  Typography,
-  InputLabel,
-  FormControl,
-  NativeSelect,
   Button,
 } from "@mui/material";
-import CircleTwoToneIcon from "@mui/icons-material/CircleTwoTone";
-import SwapVertIcon from '@mui/icons-material/SwapVert';
+import SwapVertIcon from "@mui/icons-material/SwapVert";
 
 import CardList from "../component/CardList";
+import CardHero from "../component/CardHero"; 
+import FormRent from "../component/FormRent";
 import Cars from "../data.json";
 
 import Car1 from "../assets/BGCard1.png";
 import Car2 from "../assets/BGCard2.png";
 
 export default function Home() {
+  const pickupOptions = [
+    {
+      label: "Age",
+      name: "age",
+      id: "pickup-age",
+      defaultValue: 30,
+      values: [
+        { label: "Ten", value: 10 },
+        { label: "Twenty", value: 20 },
+        { label: "Thirty", value: 30 },
+      ],
+    },
+    {
+      label: "Age",
+      name: "age",
+      id: "pickup-age",
+      defaultValue: 30,
+      values: [
+        { label: "Ten", value: 10 },
+        { label: "Twenty", value: 20 },
+        { label: "Thirty", value: 30 },
+      ],
+    },
+    {
+      label: "Age",
+      name: "age",
+      id: "pickup-age",
+      defaultValue: 30,
+      values: [
+        { label: "Ten", value: 10 },
+        { label: "Twenty", value: 20 },
+        { label: "Thirty", value: 30 },
+      ],
+    },
+  ];
+
+  const dropoffOptions = [
+    {
+      label: "Age",
+      name: "age",
+      id: "pickup-age",
+      defaultValue: 30,
+      values: [
+        { label: "Ten", value: 10 },
+        { label: "Twenty", value: 20 },
+        { label: "Thirty", value: 30 },
+      ],
+    },
+    {
+      label: "Age",
+      name: "age",
+      id: "pickup-age",
+      defaultValue: 30,
+      values: [
+        { label: "Ten", value: 10 },
+        { label: "Twenty", value: 20 },
+        { label: "Thirty", value: 30 },
+      ],
+    },
+    {
+      label: "Age",
+      name: "age",
+      id: "pickup-age",
+      defaultValue: 30,
+      values: [
+        { label: "Ten", value: 10 },
+        { label: "Twenty", value: 20 },
+        { label: "Thirty", value: 30 },
+      ],
+    },
+  ];
+
   return (
     <Stack sx={{ marginTop: "144px", backgroundColor: "#F6F7F9" }}>
       <Grid container spacing={4} sx={{ padding: "36px" }}>
-        {renderCard(
-          Car1,
-          "#54A6FF",
-          "The Best Platform for Car Rental",
-          "Ease of doing a car rental safely and reliably. Of course at a low price.",
-          "#3563E9"
-        )}
-        {renderCard(
-          Car2,
-          "#3563E9",
-          "Easy way to rent a car at a low price",
-          "Providing cheap car rental services and safe and comfortable facilities.",
-          "#54A6FF"
-        )}
+      <CardHero
+          backgroundImage={Car1}
+          backgroundColor="#54A6FF"
+          title="The Best Platform for Car Rental"
+          description="Ease of doing a car rental safely and reliably. Of course at a low price."
+          buttonColor="#3563E9"
+        />
+        <CardHero
+          backgroundImage={Car2}
+          backgroundColor="#3563E9"
+          title="Easy way to rent a car at a low price"
+          description="Providing cheap car rental services and safe and comfortable facilities."
+          buttonColor="#54A6FF"
+        />
       </Grid>
-      <Grid container>
-        <Grid>
-          <Typography>
-            <CircleTwoToneIcon /> Pick-Up
-          </Typography>
-          <Grid container>
-            <Grid>
-              <FormControl fullWidth>
-                <InputLabel variant="standard" htmlFor="uncontrolled-native">
-                  Age
-                </InputLabel>
-                <NativeSelect
-                  defaultValue={30}
-                  inputProps={{
-                    name: "age",
-                    id: "uncontrolled-native",
-                  }}
-                >
-                  <option value={10}>Ten</option>
-                  <option value={20}>Twenty</option>
-                  <option value={30}>Thirty</option>
-                </NativeSelect>
-              </FormControl>
-            </Grid>
-            <Grid>
-              <FormControl fullWidth>
-                <InputLabel variant="standard" htmlFor="uncontrolled-native">
-                  Age
-                </InputLabel>
-                <NativeSelect
-                  defaultValue={30}
-                  inputProps={{
-                    name: "age",
-                    id: "uncontrolled-native",
-                  }}
-                >
-                  <option value={10}>Ten</option>
-                  <option value={20}>Twenty</option>
-                  <option value={30}>Thirty</option>
-                </NativeSelect>
-              </FormControl>
-            </Grid>
-            <Grid>
-              <FormControl fullWidth>
-                <InputLabel variant="standard" htmlFor="uncontrolled-native">
-                  Age
-                </InputLabel>
-                <NativeSelect
-                  defaultValue={30}
-                  inputProps={{
-                    name: "age",
-                    id: "uncontrolled-native",
-                  }}
-                >
-                  <option value={10}>Ten</option>
-                  <option value={20}>Twenty</option>
-                  <option value={30}>Thirty</option>
-                </NativeSelect>
-              </FormControl>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid>
-          <Button sx={{
+      <Grid container spacing={2} sx={{ padding: "36px" }}>
+      <FormRent title="Pick-Up" iconColor="#54A6FF" options={pickupOptions} />
+        <Grid item sx={{ margin: "0 auto" }}>
+          <Button
+            sx={{
               backgroundColor: "#3563E9",
               color: "#fff",
               padding: "18px",
-              borderRadius: "10px"
-            }}>
-          <SwapVertIcon/>
+              borderRadius: "10px",
+              marginTop: "40px",
+            }}
+          >
+            <SwapVertIcon />
           </Button>
         </Grid>
-        <Grid>
-          <Typography>
-            <CircleTwoToneIcon /> Drop-Off
-          </Typography>
-          <Grid container>
-            <Grid>
-              <FormControl fullWidth>
-                <InputLabel variant="standard" htmlFor="uncontrolled-native">
-                  Age
-                </InputLabel>
-                <NativeSelect
-                  defaultValue={30}
-                  inputProps={{
-                    name: "age",
-                    id: "uncontrolled-native",
-                  }}
-                >
-                  <option value={10}>Ten</option>
-                  <option value={20}>Twenty</option>
-                  <option value={30}>Thirty</option>
-                </NativeSelect>
-              </FormControl>
-            </Grid>
-            <Grid>
-              <FormControl fullWidth>
-                <InputLabel variant="standard" htmlFor="uncontrolled-native">
-                  Age
-                </InputLabel>
-                <NativeSelect
-                  defaultValue={30}
-                  inputProps={{
-                    name: "age",
-                    id: "uncontrolled-native",
-                  }}
-                >
-                  <option value={10}>Ten</option>
-                  <option value={20}>Twenty</option>
-                  <option value={30}>Thirty</option>
-                </NativeSelect>
-              </FormControl>
-            </Grid>
-            <Grid>
-              <FormControl fullWidth>
-                <InputLabel variant="standard" htmlFor="uncontrolled-native">
-                  Age
-                </InputLabel>
-                <NativeSelect
-                  defaultValue={30}
-                  inputProps={{
-                    name: "age",
-                    id: "uncontrolled-native",
-                  }}
-                >
-                  <option value={10}>Ten</option>
-                  <option value={20}>Twenty</option>
-                  <option value={30}>Thirty</option>
-                </NativeSelect>
-              </FormControl>
-            </Grid>
-          </Grid>
-        </Grid>
+        <FormRent title="Drop-Off" iconColor="#54A6FF" options={dropoffOptions} />
       </Grid>
       <Grid container spacing={2} sx={{ padding: "36px" }}>
         {Cars.map((car) => (
@@ -180,54 +130,5 @@ export default function Home() {
         ))}
       </Grid>
     </Stack>
-  );
-}
-
-function renderCard(
-  backgroundImage,
-  backgroundColor,
-  title,
-  description,
-  buttonColor
-) {
-  const imageHeight = 360;
-  return (
-    <Grid item xs={6}>
-      <Card
-        sx={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundColor: backgroundColor,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: imageHeight,
-          borderRadius: "15px",
-        }}
-      >
-        <CardContent sx={{ width: "384px", margin: "16px" }}>
-          <Typography
-            variant="h4"
-            sx={{
-              marginBottom: "8px",
-              fontWeight: "semibold",
-              color: "#fff",
-            }}
-          >
-            {title}
-          </Typography>
-          <Typography variant="h6" sx={{ marginBottom: "8px", color: "#fff" }}>
-            {description}
-          </Typography>
-          <Button
-            sx={{
-              backgroundColor: buttonColor,
-              color: "#fff",
-              padding: "8px 16px",
-            }}
-          >
-            Rental Car
-          </Button>
-        </CardContent>
-      </Card>
-    </Grid>
   );
 }

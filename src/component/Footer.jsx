@@ -12,7 +12,12 @@ export default function Footer() {
       }}
     >
       <Container maxWidth={false}>
-        <Grid container spacing={2} justifyContent="space-between" sx={{marginY: "20px"}}>
+        <Grid
+          container
+          spacing={2}
+          justifyContent="space-between"
+          sx={{ marginY: "20px" }}
+        >
           <Grid item xs={12} sm={6} md={6}>
             <Box sx={{ width: 300, height: 110, marginLeft: "20px" }}>
               <img
@@ -37,28 +42,44 @@ export default function Footer() {
             <Link
               href="#"
               display="block"
-              sx={{ textDecoration: "none", marginBottom: "18px" }}
+              sx={{
+                textDecoration: "none",
+                marginBottom: "18px",
+                color: "inherit",
+              }}
             >
               How it works
             </Link>
             <Link
               href="#"
               display="block"
-              sx={{ textDecoration: "none", marginBottom: "18px" }}
+              sx={{
+                textDecoration: "none",
+                marginBottom: "18px",
+                color: "inherit",
+              }}
             >
               Featured
             </Link>
             <Link
               href="#"
               display="block"
-              sx={{ textDecoration: "none", marginBottom: "18px" }}
+              sx={{
+                textDecoration: "none",
+                marginBottom: "18px",
+                color: "inherit",
+              }}
             >
               Partnership
             </Link>
             <Link
               href="#"
               display="block"
-              sx={{ textDecoration: "none", marginBottom: "18px" }}
+              sx={{
+                textDecoration: "none",
+                marginBottom: "18px",
+                color: "inherit",
+              }}
             >
               Business Relation
             </Link>
@@ -74,28 +95,44 @@ export default function Footer() {
             <Link
               href="#"
               display="block"
-              sx={{ textDecoration: "none", marginBottom: "18px" }}
+              sx={{
+                textDecoration: "none",
+                marginBottom: "18px",
+                color: "inherit",
+              }}
             >
               Events
             </Link>
             <Link
               href="#"
               display="block"
-              sx={{ textDecoration: "none", marginBottom: "18px" }}
+              sx={{
+                textDecoration: "none",
+                marginBottom: "18px",
+                color: "inherit",
+              }}
             >
               Blog
             </Link>
             <Link
               href="#"
               display="block"
-              sx={{ textDecoration: "none", marginBottom: "18px" }}
+              sx={{
+                textDecoration: "none",
+                marginBottom: "18px",
+                color: "inherit",
+              }}
             >
               Podcast
             </Link>
             <Link
               href="#"
               display="block"
-              sx={{ textDecoration: "none", marginBottom: "18px" }}
+              sx={{
+                textDecoration: "none",
+                marginBottom: "18px",
+                color: "inherit",
+              }}
             >
               Invite a friend
             </Link>
@@ -111,45 +148,65 @@ export default function Footer() {
             <Link
               href="#"
               display="block"
-              sx={{ textDecoration: "none", marginBottom: "18px" }}
+              sx={{
+                textDecoration: "none",
+                marginBottom: "18px",
+                color: "inherit",
+              }}
             >
               Discord
             </Link>
             <Link
               href="#"
               display="block"
-              sx={{ textDecoration: "none", marginBottom: "18px" }}
+              sx={{
+                textDecoration: "none",
+                marginBottom: "18px",
+                color: "inherit",
+              }}
             >
               Instagram
             </Link>
             <Link
               href="#"
               display="block"
-              sx={{ textDecoration: "none", marginBottom: "18px" }}
+              sx={{
+                textDecoration: "none",
+                marginBottom: "18px",
+                color: "inherit",
+              }}
             >
               Twitter
             </Link>
             <Link
               href="#"
               display="block"
-              sx={{ textDecoration: "none", marginBottom: "18px" }}
+              sx={{
+                textDecoration: "none",
+                marginBottom: "18px",
+                color: "inherit",
+              }}
             >
               Facebook
             </Link>
           </Grid>
         </Grid>
         <Divider />
-        <Grid container alignItems="center" sx={{marginY: "20px"}}>
+        <Grid container alignItems="center" sx={{ marginY: "20px" }}>
           <Grid item xs={6}>
-            <Typography sx={{marginLeft: "20px" , fontWeight: "bold"}}>
+            <Typography sx={{ marginLeft: "20px", fontWeight: "bold" }}>
               © 2024 Company Co. All rights reserved.
             </Typography>
           </Grid>
-          <Grid item xs={3} >
-            <Typography sx={{fontWeight: "bold"}}>Privacy & Policy</Typography>
+          <Grid item xs={3}>
+            <Typography sx={{ fontWeight: "bold" }}>
+              Privacy & Policy
+            </Typography>
           </Grid>
           <Grid item xs={3}>
-            <Typography sx={{fontWeight: "bold"}}>Terms & Condition</Typography>
+            <Typography sx={{ fontWeight: "bold" }}>
+              Terms & Condition
+            </Typography>
           </Grid>
         </Grid>
       </Container>

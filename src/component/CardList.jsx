@@ -34,12 +34,8 @@ export default function CardList({ car }) {
             </Grid>
           </Grid>
         </Box>
-        <Box sx={{paddingY: 5}}>
-        <CardMedia
-          component="img"
-          alt={car.title}
-          image={car.image}
-        />
+        <Box sx={{ paddingY: 5 }}>
+          <CardMedia component="img" alt={car.title} image={car.image} />
         </Box>
         <Box sx={{ paddingY: 2 }}>
           <Grid container alignItems="center">
@@ -64,16 +60,16 @@ export default function CardList({ car }) {
           </Grid>
         </Box>
         <Box>
-        <Grid container alignItems="center">
-          <Grid item xs={6} textAlign="center">
-            <Typography variant="h6">${car.price}.00/day</Typography>
+          <Grid container alignItems="center">
+            <Grid item xs={6} textAlign="center">
+              <Typography variant="h6">${car.price}.00/day</Typography>
+            </Grid>
+            <Grid item xs={6} textAlign="center">
+              <Button variant="contained" color="primary">
+                Rent Now
+              </Button>
+            </Grid>
           </Grid>
-          <Grid item xs={6} textAlign="center">
-            <Button variant="contained" color="primary">
-              Rent Now
-            </Button>
-          </Grid>
-        </Grid>
         </Box>
       </CardContent>
     </Card>
