@@ -14,6 +14,9 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import SideHome from "../component/SideHome";
 import { useState } from "react";
 import Car from "../assets/BGCard2.png";
+import Cars from "../data.json";
+import CardList from "../component/CardList";
+
 
 export default function Detail() {
   const [value, setValue] = useState(4);
@@ -70,6 +73,13 @@ export default function Detail() {
             </Card>
           </Grid>
         </Grid>
+        <Grid container spacing={2} sx={{ padding: "36px" }}>
+        {Cars.map((car) => (
+          <Grid key={car.id} item xs={12} sm={6} md={4}>
+            <CardList car={car} />
+          </Grid>
+        ))}
+      </Grid>
       </Container>
     </>
   );
