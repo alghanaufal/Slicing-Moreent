@@ -52,7 +52,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Navbar() {
   return (
-    <AppBar sx={{ height: 124, backgroundColor: "white" }}>
+    <AppBar position="fixed" sx={{ zIndex:(theme) => theme.zIndex.drawer +1, backgroundColor: "white" }}>
       <Toolbar sx={{ height: "100%" }}>
         <img
           src={Logo}
