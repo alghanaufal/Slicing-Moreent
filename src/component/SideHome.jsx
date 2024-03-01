@@ -40,7 +40,7 @@ export default function SideHome() {
 
   return (
     <Drawer anchor="left" variant="permanent">
-      <Box sx={{ marginTop: "134px" }}>
+      <Box sx={{ marginTop: "134px", paddingX:"30px" }}>
         <Box>
           <FormControl>
             <Typography variant="subtitle2">TYPE</Typography>

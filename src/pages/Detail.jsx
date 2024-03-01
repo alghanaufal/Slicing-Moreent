@@ -11,11 +11,13 @@ import {
   Rating,
 } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 
 import CardList from "../component/CardList";
 import SideHome from "../component/SideHome";
 import Cars from "../data.json";
 
+import Profil from "../assets/Profil.png";
 import Car from "../assets/BGCard2.png";
 import Preview1 from "../assets/View 1.png";
 import Preview2 from "../assets/View 2.png";
@@ -34,6 +36,7 @@ export default function Detail() {
       <SideHome />
       <Container
         sx={{
+          backgroundColor: "#F6F7F9",
           marginTop: "124px",
           marginRight: "0",
           minHeight: "calc(100vh - 248px)",
@@ -49,7 +52,7 @@ export default function Detail() {
               <Card
                 sx={{
                   backgroundImage: `url(${Car})`,
-                  backgroundColor: "#54A6FF",
+                  backgroundColor: "#3563E9",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   height: 360,
@@ -225,12 +228,16 @@ export default function Detail() {
                     </Typography>
                   </Grid>
                 </Grid>
-                <Grid container alignItems="center" sx={{paddingTop:6}}>
+                <Grid container alignItems="center" sx={{ paddingTop: 6 }}>
                   <Grid item xs={6} textAlign="start">
                     <Typography variant="h4">$99.00/day</Typography>
                   </Grid>
                   <Grid item xs={6} textAlign="end">
-                    <Button variant="contained" color="primary" sx={{paddingX: 4, paddingY: 3}}>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      sx={{ paddingX: 4, paddingY: 3 }}
+                    >
                       Rent Now
                     </Button>
                   </Grid>
@@ -238,6 +245,103 @@ export default function Detail() {
               </Card>
             </Grid>
           </Grid>
+          <Box
+            sx={{
+              backgroundColor: "#FFFFFF",
+              marginX: 4,
+              padding: 4,
+              borderRadius: "10px",
+            }}
+          >
+            <Grid container alignItems="center" columnSpacing={1}>
+              <Grid item>
+                <Typography variant="h6" fontWeight={600} paddingRight={2}>
+                  Reviews
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography
+                  color="white"
+                  sx={{
+                    backgroundColor: "#3563E9",
+                    fontSize: 14,
+                    fontWeight: 700,
+                    paddingX: "16px",
+                    paddingY: "5px",
+                    borderRadius: "4px",
+                  }}
+                >
+                  13
+                </Typography>
+              </Grid>
+            </Grid>
+            {[...new Array(2)].map((_, index) => (
+              <Grid
+                container
+                columnSpacing={1}
+                sx={{ paddingTop: 2 }}
+                key={index}
+              >
+                <Grid item>
+                  <img
+                    src={Profil}
+                    alt="profil"
+                    style={{ width: 50, height: 50, borderRadius: 50 }}
+                  />
+                </Grid>
+                <Grid container item xs={11} spacing={0}>
+                  <Grid container justifyContent="space-between" item>
+                    <Grid item>
+                      <Typography variant="subtitle1" fontWeight={700}>
+                        Alex Stanton
+                      </Typography>
+                    </Grid>
+                    <Grid item>
+                      <Typography variant="body2" color="text.secondary">
+                        21 July 2022
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid
+                    container
+                    justifyContent="space-between"
+                    alignItems="center"
+                    item
+                  >
+                    <Grid item>
+                      <Typography variant="body2" color="text.secondary">
+                        CEO at Bukalapak
+                      </Typography>
+                    </Grid>
+                    <Grid item>
+                      <Rating name={`read-only-${index}`} value={4} readOnly />
+                    </Grid>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="body2" color="text.secondary">
+                      We are very happy with the service from the MORENT App.
+                      Morent has a low price and also a large variety of cars
+                      with good and comfortable facilities. In addition, the
+                      service provided by the officers is also very friendly and
+                      very polite.
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
+            ))}
+            <Grid
+              container
+              justifyContent="center"
+              alignItems="center"
+              sx={{ marginTop: 4 }}
+            >
+              <Typography variant="subtitle1" fontWeight={600}>
+                Show All
+              </Typography>
+              <ExpandMoreRoundedIcon />
+            </Grid>
+          </Box>
+          ;
           <Grid container spacing={2} sx={{ padding: "36px" }}>
             {Cars.map((car) => (
               <Grid key={car.id} item xs={12} sm={6} md={4}>
