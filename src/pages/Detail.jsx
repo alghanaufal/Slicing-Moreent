@@ -13,11 +13,13 @@ import {
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 import CardList from "../component/CardList";
-import CardHero from "../component/CardHero";
 import SideHome from "../component/SideHome";
 import Cars from "../data.json";
 
 import Car from "../assets/BGCard2.png";
+import Preview1 from "../assets/View 1.png";
+import Preview2 from "../assets/View 2.png";
+import Preview3 from "../assets/View 3.png";
 
 export default function Detail() {
   const [value, setValue] = useState(4);
@@ -63,70 +65,174 @@ export default function Detail() {
                       color: "#fff",
                     }}
                   >
-                    The Best Platform for Car Rental
+                    Sports car with the best design and acceleration
                   </Typography>
                   <Typography
                     variant="h6"
                     sx={{ marginBottom: "8px", color: "#fff" }}
                   >
-                    Ease of doing a car rental safely and reliably. Of course at
-                    a low price.
+                    Safety and comfort while driving a futuristic and elegant
+                    sports car
                   </Typography>
-                  <Button
-                    sx={{
-                      backgroundColor: "#3563E9",
-                      color: "#fff",
-                      padding: "8px 16px",
-                    }}
-                  >
-                    Rental Car
-                  </Button>
                 </CardContent>
               </Card>
+              <Grid container spacing={2} sx={{ marginY: 2 }}>
+                <Grid item xs={4}>
+                  <img
+                    src={Preview1}
+                    alt="Photo 1"
+                    style={{ width: "100%", borderRadius: "8px" }}
+                  />
+                </Grid>
+                <Grid item xs={4}>
+                  <img
+                    src={Preview2}
+                    alt="Photo 2"
+                    style={{ width: "100%", borderRadius: "8px" }}
+                  />
+                </Grid>
+                <Grid item xs={4}>
+                  <img
+                    src={Preview3}
+                    alt="Photo 3"
+                    style={{ width: "100%", borderRadius: "8px" }}
+                  />
+                </Grid>
+              </Grid>
             </Grid>
             <Grid item xs={6}>
-              <Card>
-                <Grid container>
-                  <Grid item xs={11}>
-                    <Typography variant="h5">Nissan GT - R</Typography>
+              <Card sx={{ height: 480, padding: 3 }}>
+                <Box sx={{ paddingBottom: 2, lineHeight: 3 }}>
+                  <Grid container>
+                    <Grid item xs={11}>
+                      <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                        Nissan GT - R
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={1}>
+                      <FavoriteIcon color="error" />
+                    </Grid>
                   </Grid>
-                  <Grid item xs={1}>
-                    <FavoriteIcon color="error" />
-                  </Grid>
-                </Grid>
-                <Stack direction="row">
-                  <Rating size="small" value={value} onChange={handleChange} />
-                  <Typography variant="subtitle2">440+ Reviewer</Typography>
-                </Stack>
-                <Typography marginTop={2} variant="subtitle2">
+                  <Stack direction="row">
+                    <Rating
+                      size="small"
+                      value={value}
+                      onChange={handleChange}
+                    />
+                    <Typography variant="subtitle2">440+ Reviewer</Typography>
+                  </Stack>
+                </Box>
+                <Typography marginTop={2} variant="h6" sx={{ lineHeight: 2 }}>
                   NISMO has become the embodiment of Nissan's outstanding
                   performance, inspired by the most unforgiving proving ground,
                   the "race track"
                 </Typography>
-                <Grid container my={4}>
+                <Grid container my={4} sx={{ lineHeight: 3 }}>
                   <Grid item xs={3}>
-                    Type Car
+                    <Typography
+                      variant="subtitle1"
+                      sx={{
+                        fontSize: "1.2rem",
+                        fontWeight: "bold",
+                        lineHeight: 2,
+                      }}
+                    >
+                      Type Car
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={3} textAlign="end">
+                    <Typography
+                      variant="subtitle1"
+                      sx={{
+                        fontSize: "1.2rem",
+                        fontWeight: "bold",
+                        lineHeight: 2,
+                      }}
+                    >
+                      Sport
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={3} textAlign="center">
+                    <Typography
+                      variant="subtitle1"
+                      sx={{
+                        fontSize: "1.2rem",
+                        fontWeight: "bold",
+                        lineHeight: 2,
+                      }}
+                    >
+                      Capacity
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={3} textAlign="end">
+                    <Typography
+                      variant="subtitle1"
+                      sx={{
+                        fontSize: "1.2rem",
+                        fontWeight: "bold",
+                        lineHeight: 2,
+                      }}
+                    >
+                      2 Person
+                    </Typography>
                   </Grid>
                   <Grid item xs={3}>
-                    Sport
+                    <Typography
+                      variant="subtitle1"
+                      sx={{
+                        fontSize: "1.2rem",
+                        fontWeight: "bold",
+                        lineHeight: 2,
+                      }}
+                    >
+                      Steering
+                    </Typography>
                   </Grid>
-                  <Grid item xs={3}>
-                    Capacity
+                  <Grid item xs={3} textAlign="end">
+                    <Typography
+                      variant="subtitle1"
+                      sx={{
+                        fontSize: "1.2rem",
+                        fontWeight: "bold",
+                        lineHeight: 2,
+                      }}
+                    >
+                      Manual
+                    </Typography>
                   </Grid>
-                  <Grid item xs={3}>
-                    2 Person
+                  <Grid item xs={3} textAlign="center">
+                    <Typography
+                      variant="subtitle1"
+                      sx={{
+                        fontSize: "1.2rem",
+                        fontWeight: "bold",
+                        lineHeight: 2,
+                      }}
+                    >
+                      Gasoline
+                    </Typography>
                   </Grid>
-                  <Grid item xs={3}>
-                    Steering
+                  <Grid item xs={3} textAlign="end">
+                    <Typography
+                      variant="subtitle1"
+                      sx={{
+                        fontSize: "1.2rem",
+                        fontWeight: "bold",
+                        lineHeight: 2,
+                      }}
+                    >
+                      70L
+                    </Typography>
                   </Grid>
-                  <Grid item xs={3}>
-                    Manual
+                </Grid>
+                <Grid container alignItems="center" sx={{paddingTop:6}}>
+                  <Grid item xs={6} textAlign="start">
+                    <Typography variant="h4">$99.00/day</Typography>
                   </Grid>
-                  <Grid item xs={3}>
-                    Gasoline
-                  </Grid>
-                  <Grid item xs={3}>
-                    70L
+                  <Grid item xs={6} textAlign="end">
+                    <Button variant="contained" color="primary" sx={{paddingX: 4, paddingY: 3}}>
+                      Rent Now
+                    </Button>
                   </Grid>
                 </Grid>
               </Card>
